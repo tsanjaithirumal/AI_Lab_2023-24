@@ -14,12 +14,8 @@ To write a python program to implement Breadth first Search.
 8.   Stop the program.
 ### Program:
 ```
-   "5":["3","7"],
-    "3":["2","4"],
-    "7":["8"],
-    "2":[ ],
-    "4":[8],
-    "8":[ ],
+graph={
+    'A':['B','C'],'B':['D','E'],'C':['F','G'],'D':[],'E':[],'F':[],'G':[]
 }
 visited=[]
 queue=[]
@@ -27,21 +23,22 @@ def bfs(visited,graph,node):
     visited.append(node)
     queue.append(node)
     while queue:
-        m=queue.pop(0)
-        print(m)
-        for neighbour in graph[m]:
+        n=queue.pop(0)
+        print(n)
+        for neighbour in graph:
             if neighbour not in visited:
                 visited.append(neighbour)
                 queue.append(neighbour)
+print("Following is the Breath-First Search")
+bfs(visited,graph,'A')
 
-print("Following is the breadth first search")
-bfs(visited,graph,'5')              
 ```
 
 
 
 ### Output:
-![image](https://github.com/user-attachments/assets/4895ae5e-141c-4d3d-a985-e3ff29ac48dd)
+![image](https://github.com/user-attachments/assets/220ceeee-1c35-49c9-9e51-c0fbaa9c73a4)
+
 
 
 
